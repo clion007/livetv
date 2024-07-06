@@ -1,0 +1,53 @@
+# Description: Update IPTV source using GitHub Actions
+#
+# This is free software, licensed under the GPL v3 License.
+# See /LICENSE for more information.
+
+name: Update Source
+
+env:
+  TZ: Asia/Shanghai
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 16 * * *
+
+jobs:
+  Update_source:
+    name: Update live sources
+    runs-on: ubuntu-latest
+
+    permissions:
+      actions: write
+      contents: write
+
+    steps:
+    
+      - name: CheckOut
+        uses: actions/checkout@v4
+
+      - name: Set TimeZone
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          sudo timedatectl set-timezone "$TZ"
+      
+      - name: Build m3u
+        shell: sh
+        run: |
+          cd ${GITHUB_WORKSPACE}
+          sh ./build.sh
+
+      - name: Git Auto Update m3u
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_author: Clion <clion007@126.com>
+          file_pattern: m3u/*.m3u
+      
+      - name: Delete Workflow Runs
+        uses: Mattraks/delete-workflow-runs@main
+        continue-on-error: true
+        with:
+          retain_days: 0
+          keep_minimum_runs: 5
