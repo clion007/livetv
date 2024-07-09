@@ -1,4 +1,10 @@
 #EXTM3U Clion <clion007@126.com> 维护整理
+#EXTINF:-1 tvg-name="中国交通" tvg-id="中国交通" tvg-logo="https://live.fanmingming.com/tv/中国交通.png" group-title="数字频道",中国交通
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227499/index.m3u8
+#EXTINF:-1 tvg-name="汽摩" tvg-id="汽摩" tvg-logo="https://live.fanmingming.com/tv/汽摩.png" group-title="数字频道",汽摩
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227968/index.m3u8
+#EXTINF:-1 tvg-name="欢笑剧场4K" tvg-id="欢笑剧场" tvg-logo="https://live.fanmingming.com/tv/欢笑剧场.png" group-title="数字频道",欢笑剧场4K
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227970/index.m3u8
 #EXTINF:-1 tvg-name="四川经济" tvg-id="四川经济" tvg-logo="https://live.fanmingming.com/tv/四川经济.png" group-title="地方",四川经济
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227415/index.m3u8
 #EXTINF:-1 tvg-name="四川文化旅游" tvg-id="四川文化旅游" tvg-logo="https://live.fanmingming.com/tv/四川文化旅游.png" group-title="地方",四川文化旅游
@@ -15,5 +21,55 @@ http://sc.rrs.169ol.com/PLTV/88888888/224/3221227936/index.m3u8
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227403/index.m3u8
 #EXTINF:-1 tvg-name="峨眉电影" tvg-id="峨眉电影" tvg-logo="https://live.fanmingming.com/tv/峨眉电影.png" group-title="地方",峨眉电影
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227942/index.m3u8
-#EXTINF:-1 tvg-name="中国交通" tvg-id="中国交通" tvg-logo="https://live.fanmingming.com/tv/中国交通.png" group-title="数字频道",中国交通
-http://sc.rrs.169ol.com/PLTV/88888888/224/3221227499/index.m3u8
+#EXTINF:-1 tvg-name="成都新闻综合" tvg-id="成都新闻综合" tvg-logo="https://live.fanmingming.com/tv/成都新闻综合.png" group-title="地方",成都新闻综合
+CDTV-1,http://119.4.91.10:80/PLTV/88888888/224/3221227495/1.m3u8
+#EXTINF:-1 tvg-name="成都经济资讯" tvg-id="成都经济资讯" tvg-logo="https://live.fanmingming.com/tv/成都经济资讯.png" group-title="地方",成都经济资讯
+CDTV-2,http://sc.rrs.169ol.com/PLTV/88888888/224/3221227949/index.m3u8
+#EXTINF:-1 tvg-name="成都生活" tvg-id="成都生活" tvg-logo="https://live.fanmingming.com/tv/成都生活.png" group-title="地方",成都生活
+CDTV-3,http://sc.rrs.169ol.com/PLTV/88888888/224/3221227950/index.m3u8
+#EXTINF:-1 tvg-name="成都影视文艺" tvg-id="成都影视文艺" tvg-logo="https://live.fanmingming.com/tv/成都影视文艺.png" group-title="地方",成都影视文艺
+CDTV-4,http://sc.rrs.169ol.com/PLTV/88888888/224/3221227951/index.m3u8
+#EXTINF:-1 tvg-name="成都公共" tvg-id="成都公共" tvg-logo="https://live.fanmingming.com/tv/成都公共.png" group-title="地方",成都公共
+CDTV-5,http://sc.rrs.169ol.com/PLTV/88888888/224/3221227587/index.m3u8
+#EXTINF:-1 tvg-name="成都少儿" tvg-id="成都少儿" tvg-logo="https://live.fanmingming.com/tv/成都少儿.png" group-title="地方",成都少儿
+CDTV-6,http://sc.rrs.169ol.com/PLTV/88888888/224/3221227953/index.m3u8
+#EXTINF:-1 tvg-name="攀枝花新闻综合" tvg-id="攀枝花新闻综合" tvg-logo="https://live.fanmingming.com/tv/攀枝花新闻综合.png" group-title="地方",攀枝花新闻综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227527/index.m3u8
+#EXTINF:-1 tvg-name="泸州新闻综合" tvg-id="泸州新闻综合" tvg-logo="https://live.fanmingming.com/tv/泸州新闻综合.png" group-title="地方",泸州新闻综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227529/index.m3u8
+#EXTINF:-1 tvg-name="眉山综合" tvg-id="眉山综合" tvg-logo="https://live.fanmingming.com/tv/眉山综合.png" group-title="地方",眉山综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227539/index.m3u8
+#EXTINF:-1 tvg-name="广安新闻综合" tvg-id="广安新闻综合" tvg-logo="https://live.fanmingming.com/tv/广安新闻综合.png" group-title="地方",广安新闻综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227543/index.m3u8
+#EXTINF:-1 tvg-name="德阳文旅科教" tvg-id="德阳文旅科教" tvg-logo="https://live.fanmingming.com/tv/德阳文旅科教.png" group-title="地方",德阳文旅科教
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227555/index.m3u8
+#EXTINF:-1 tvg-name="巴中综合" tvg-id="巴中综合" tvg-logo="https://live.fanmingming.com/tv/巴中综合.png" group-title="地方",巴中综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227557/index.m3u8
+#EXTINF:-1 tvg-name="南充综合" tvg-id="南充综合" tvg-logo="https://live.fanmingming.com/tv/南充综合.png" group-title="地方",南充综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227805/index.m3u8
+#EXTINF:-1 tvg-name="内江综合" tvg-id="内江综合" tvg-logo="https://live.fanmingming.com/tv/内江综合.png" group-title="地方",内江综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227932/index.m3u8
+#EXTINF:-1 tvg-name="遂宁综合" tvg-id="遂宁综合" tvg-logo="https://live.fanmingming.com/tv/遂宁综合.png" group-title="地方",遂宁综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227533/index.m3u8
+#EXTINF:-1 tvg-name="乐山新闻综合" tvg-id="乐山新闻综合" tvg-logo="https://live.fanmingming.com/tv/乐山新闻综合.png" group-title="地方",乐山新闻综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227537/index.m3u8
+#EXTINF:-1 tvg-name="达州新闻综合" tvg-id="达州新闻综合" tvg-logo="https://live.fanmingming.com/tv/达州新闻综合.png" group-title="地方",达州新闻综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227581/index.m3u8
+#EXTINF:-1 tvg-name="绵阳新闻综合" tvg-id="绵阳新闻综合" tvg-logo="https://live.fanmingming.com/tv/绵阳新闻综合.png" group-title="地方",绵阳新闻综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227521/index.m3u8
+#EXTINF:-1 tvg-name="宜宾新闻综合" tvg-id="宜宾新闻综合" tvg-logo="https://live.fanmingming.com/tv/宜宾新闻综合.png" group-title="地方",宜宾新闻综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227541/index.m3u8
+#EXTINF:-1 tvg-name="广元综合" tvg-id="广元综合" tvg-logo="https://live.fanmingming.com/tv/广元综合.png" group-title="地方",广元综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227531/index.m3u8
+#EXTINF:-1 tvg-name="雅安新闻综合" tvg-id="雅安新闻综合" tvg-logo="https://live.fanmingming.com/tv/雅安新闻综合.png" group-title="地方",雅安新闻综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227559/index.m3u8
+#EXTINF:-1 tvg-name="资阳新闻综合" tvg-id="资阳新闻综合" tvg-logo="https://live.fanmingming.com/tv/资阳新闻综合.png" group-title="地方",资阳新闻综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227547/index.m3u8
+#EXTINF:-1 tvg-name="自贡综合" tvg-id="自贡综合" tvg-logo="https://live.fanmingming.com/tv/自贡综合.png" group-title="地方",自贡综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227930/index.m3u8
+#EXTINF:-1 tvg-name="甘孜综合" tvg-id="甘孜综合" tvg-logo="https://live.fanmingming.com/tv/甘孜综合.png" group-title="地方",甘孜综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227549/index.m3u8
+#EXTINF:-1 tvg-name="阿坝新闻综合" tvg-id="阿坝新闻综合" tvg-logo="https://live.fanmingming.com/tv/阿坝新闻综合.png" group-title="地方",阿坝新闻综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227561/index.m3u8
+#EXTINF:-1 tvg-name="凉山新闻综合" tvg-id="凉山新闻综合" tvg-logo="https://live.fanmingming.com/tv/凉山新闻综合.png" group-title="地方",凉山新闻综合
+http://sc.rrs.169ol.com/PLTV/88888888/224/3221227551/index.m3u8
