@@ -36,7 +36,6 @@ jobs:
       - name: Build m3u
         shell: sh
         run: |
-          cd ${GITHUB_WORKSPACE}
           sh ./build.sh
 
       - name: Git Auto Update m3u
