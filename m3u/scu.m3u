@@ -114,7 +114,7 @@ http://sc.rrs.169ol.com/PLTV/88888888/224/3221227117/index.m3u8
 #EXTINF:-1 tvg-name="内蒙古卫视" tvg-id="内蒙古卫视" tvg-logo="https://live.fanmingming.cn/tv/内蒙古卫视.png" group-title="卫视频道",内蒙古卫视
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227181/index.m3u8
 #EXTINF:-1 tvg-name="海南卫视" tvg-id="海南卫视" tvg-logo="https://live.fanmingming.cn/tv/海南卫视.png" group-title="卫视频道",海南卫视
-http://sc.rrs.169ol.com/PLTV/88888888/224/3221227139/index.m3u8
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227917/index.m3u8
 #EXTINF:-1 tvg-name="西藏卫视" tvg-id="西藏卫视" tvg-logo="https://live.fanmingming.cn/tv/西藏卫视.png" group-title="卫视频道",西藏卫视
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227131/index.m3u8
 #EXTINF:-1 tvg-name="安多卫视" tvg-id="安多卫视" tvg-logo="https://live.fanmingming.cn/tv/安多卫视.png" group-title="卫视频道",安多卫视
@@ -135,6 +135,8 @@ http://sc.rrs.169ol.com/PLTV/88888888/224/3221227371/index.m3u8
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227149/index.m3u8
 #EXTINF:-1 tvg-name="卡酷动画" tvg-id="卡酷动画" tvg-logo="https://live.fanmingming.com/tv/卡酷动画.png" group-title="北京频道",卡酷动画
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227189/index.m3u8
+#EXTINF:-1 tvg-name="财富天下" tvg-id="财富天下" tvg-logo="https://live.fanmingming.com/tv/财富天下.png" group-title="江苏频道",财富天下
+http://sc.rrs.169ol.com:80/PLTV/88888888/224/3221227921/index.m3u8
 #EXTINF:-1 tvg-name="四川经济" tvg-id="四川经济" tvg-logo="https://live.fanmingming.com/tv/四川经济.png" group-title="四川频道",四川经济
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227415/index.m3u8
 #EXTINF:-1 tvg-name="四川文化旅游" tvg-id="四川文化旅游" tvg-logo="https://live.fanmingming.com/tv/四川文化旅游.png" group-title="四川频道",四川文化旅游
