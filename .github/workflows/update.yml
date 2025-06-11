@@ -39,7 +39,7 @@ jobs:
           sh ./build.sh
 
       - name: Git Auto Update m3u
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_author: Clion <clion007@126.com>
           file_pattern: m3u/*.m3u
