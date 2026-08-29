@@ -10,7 +10,7 @@ import sys
 from datetime import datetime
 
 # 配置
-EPG_URL = "https://vip.erw.cc/all.xml"
+EPG_URL = "https://vip.erw.cc/e.xml"
 OUTPUT_PATH = "epg/china.xml"  # 相对于仓库根目录
 
 def download_epg(url):
