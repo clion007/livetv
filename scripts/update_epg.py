@@ -10,7 +10,7 @@ import sys
 from datetime import datetime
 
 # 配置
-EPG_URL = "https://vip.erw.cc/e.xml"
+EPG_URL = "https://vip.erw.cc/all.xml"
 OUTPUT_PATH = "epg/china.xml"  # 相对于仓库根目录
 
 def download_epg(url):
@@ -22,7 +22,7 @@ def download_epg(url):
             print(f"[{datetime.now()}] 下载成功，大小: {len(data)} 字节")
             return data
     except Exception as e:
-        print(f"[{datetime.now()] 下载失败: {e}")
+        print(f"[{datetime.now()}] 下载失败: {e}")
         sys.exit(1)
 
 def parse_and_replace(xml_data):
