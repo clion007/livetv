@@ -1,0 +1,48 @@
+name: 更新 EPG 节目单
+
+on:
+  # 定时触发：每天北京时间 00:40（UTC 16:40）
+  schedule:
+    - cron: '40 16 * * *'
+  # 手动触发（方便测试）
+  workflow_dispatch:
+
+jobs:
+  update-epg:
+    runs-on: ubuntu-latest
+
+    permissions:
+      actions: write
+      contents: write
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v7
+
+      - name: 设置时区
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          sudo timedatectl set-timezone "$TZ"
+
+      - name: 设置 Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - name: 更新 EPG 节目单
+        run: python scripts/update_epg.py
+
+      - name: 提交并推送 EPG 节目单
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_author: Clion <clion007@126.com>
+          file_pattern: epg/china.xml
+          commit_message: "自动更新 EPG 节目单 $(date '+%Y-%m-%d %H:%M:%S')"
+      
+      - name: 删除旧运行记录
+        uses: Mattraks/delete-workflow-runs@main
+        continue-on-error: true
+        with:
+          retain_days: 0
+          keep_minimum_runs: 5
