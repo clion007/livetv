@@ -36,7 +36,7 @@ jobs:
       - name: Build m3u
         shell: sh
         run: |
-          sh ./build.sh
+          sh scripts/build_m3u.sh
 
       - name: Git Auto Update m3u
         uses: stefanzweifel/git-auto-commit-action@v7
