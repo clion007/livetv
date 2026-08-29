@@ -2,7 +2,7 @@
 """
 EPG 更新脚本
 从 kuke31/xmlgz 获取7天回看EPG，将 tvg-id 从数字ID替换为频道名（取自display-name），
-清理无效数据，并重排为【先频道列表、后节目列表】的标准格式。
+清理无效数据，重排为先频道后节目，并自定义根节点属性。
 """
 
 import xml.etree.ElementTree as ET
@@ -37,36 +37,33 @@ def parse_and_replace(xml_str):
         print(f"[{datetime.now()}] XML 解析失败: {e}")
         sys.exit(1)
 
-    # ---- 第一步：建立 数字ID → 频道名 的映射 ----
+    # 第一步：建立 数字ID → 频道名 的映射
     id_to_name = {}
     channels = root.findall('channel')
     print(f"[{datetime.now()}] 找到 {len(channels)} 个频道")
 
     for ch in channels:
         cid = ch.get('id', '')
-        # 从 <display-name> 中提取频道名
         display_name_elem = ch.find('display-name')
         if display_name_elem is not None and display_name_elem.text:
             name = display_name_elem.text.strip()
         else:
-            # 如果没有 display-name，尝试 tvg-name 属性（兼容）
             name = ch.get('tvg-name', '').strip()
         if cid and name:
             id_to_name[cid] = name
 
     print(f"[{datetime.now()}] 建立了 {len(id_to_name)} 个映射（数字ID → 频道名）")
 
-    # ---- 第二步：替换所有 channel 标签自身的 id ----
+    # 第二步：替换 channel 标签自身的 id
     for ch in channels:
         old_id = ch.get('id', '')
         if old_id in id_to_name:
             new_id = id_to_name[old_id]
             ch.set('id', new_id)
-            # 同时更新 tvg-id（如果有）
             if ch.get('tvg-id'):
                 ch.set('tvg-id', new_id)
 
-    # ---- 第三步：替换所有 programme 的 channel 属性 ----
+    # 第三步：替换 programme 的 channel 属性
     all_progs = root.findall('programme')
     print(f"[{datetime.now()}] 找到 {len(all_progs)} 个节目条目")
     replaced = 0
@@ -77,18 +74,22 @@ def parse_and_replace(xml_str):
             replaced += 1
     print(f"[{datetime.now()}] 替换了 {replaced} 个节目条目的 channel")
 
-    # ---- 第四步：删除 channel="9999" 的无意义节目 ----
+    # 第四步：删除 channel="9999" 的无效节目
     to_remove = [p for p in root.findall('programme') if p.get('channel') == '9999']
     for p in to_remove:
         root.remove(p)
     print(f"[{datetime.now()}] 删除了 {len(to_remove)} 个无效节目 (channel=9999)")
 
-    # ---- 第五步：重排为【先频道、后节目】的标准结构 ----
-    # 注意：此时 channel 的 id 已经变成频道名，programme 的 channel 也变成了频道名
+    # 第五步：重排为【先频道、后节目】
     ch_elems = [e for e in root if e.tag == 'channel']
     prog_elems = [e for e in root if e.tag == 'programme']
     root[:] = ch_elems + prog_elems
     print(f"[{datetime.now()}] 重排完成：{len(ch_elems)} 个频道在前，{len(prog_elems)} 个节目在后")
+
+    # 第六步：修改根节点属性
+    root.set('generator-info-name', 'Clion Nieh <clion007@126.com>')
+    root.set('generator-info-url', 'https://github.com/clion007/livetv')
+    print(f"[{datetime.now()}] 已更新根节点属性")
 
     return ET.ElementTree(root)
 
