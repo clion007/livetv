@@ -34,14 +34,20 @@ jobs:
           python-version: '3.13'
 
       - name: 更新 EPG 节目单
-        run: python scripts/update_epg.py
+        run: |
+          python scripts/update_epg.py
+          
+      - name: 获取当前日期时间
+        id: time
+        run: |
+          echo "datetime=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
 
       - name: 提交并推送 EPG 节目单
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_author: Clion <clion007@126.com>
           file_pattern: epg/china.xml
-          commit_message: "自动更新 EPG 节目单 $(date '+%Y-%m-%d %H:%M:%S')"
+          commit_message: "自动更新 EPG 节目单 ${{ steps.time.outputs.datetime }}"
       
       - name: 删除旧运行记录
         uses: Mattraks/delete-workflow-runs@main
